@@ -52,7 +52,7 @@ function AuthPage() {
       <header className="px-4 lg:px-6 h-14 flex items-center border-b">
         <Link to={"/"} className="flex items-center justify-center">
           <GraduationCap className="h-8 w-8 mr-4" />
-          <span className="font-extrabold text-xl">LMS LEARN</span>
+          <span className="font-extrabold text-xl">Centro Profissional Excel Informática</span>
         </Link>
       </header>
       <div className="flex items-center justify-center min-h-screen bg-background">
@@ -63,15 +63,15 @@ function AuthPage() {
           className="w-full max-w-md"
         >
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="signin">Sign In</TabsTrigger>
-            <TabsTrigger value="signup">Sign Up</TabsTrigger>
+            <TabsTrigger value="signin">Entrar</TabsTrigger>
+            <TabsTrigger value="signup">Cadastre-se</TabsTrigger>
           </TabsList>
           <TabsContent value="signin">
             <Card className="p-6 space-y-4">
               <CardHeader>
-                <CardTitle>Sign in to your account</CardTitle>
+                <CardTitle>Entre com sua conta</CardTitle>
                 <CardDescription>
-                  Enter your email and password to access your account
+                  Entre com seu email e senha para acessar sua conta
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">
@@ -89,9 +89,9 @@ function AuthPage() {
           <TabsContent value="signup">
             <Card className="p-6 space-y-4">
               <CardHeader>
-                <CardTitle>Create a new account</CardTitle>
+                <CardTitle>Criar conta</CardTitle>
                 <CardDescription>
-                  Enter your details to get started
+                  Insira seus dados no formulário para se cadastrar
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">

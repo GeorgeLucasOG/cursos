@@ -46,12 +46,12 @@ function InstructorDashboard({ listOfCourses }) {
   const config = [
     {
       icon: Users,
-      label: "Total Students",
+      label: "Total de estudantes",
       value: calculateTotalStudentsAndProfit().totalStudents,
     },
     {
       icon: DollarSign,
-      label: "Total Revenue",
+      label: "Total de receita",
       value: calculateTotalStudentsAndProfit().totalProfit,
     },
   ];
@@ -75,16 +75,16 @@ function InstructorDashboard({ listOfCourses }) {
       </div>
       <Card>
         <CardHeader>
-          <CardTitle>Students List</CardTitle>
+          <CardTitle>Lista de estudantes</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
             <Table className="w-full">
               <TableHeader>
                 <TableRow>
-                  <TableHead>Course Name</TableHead>
-                  <TableHead>Student Name</TableHead>
-                  <TableHead>Student Email</TableHead>
+                  <TableHead>Nome do curso</TableHead>
+                  <TableHead>Nome do estudente</TableHead>
+                  <TableHead>Email do estudente</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>

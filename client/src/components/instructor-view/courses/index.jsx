@@ -28,7 +28,7 @@ function InstructorCourses({ listOfCourses }) {
   return (
     <Card>
       <CardHeader className="flex justify-between flex-row items-center">
-        <CardTitle className="text-3xl font-extrabold">All Courses</CardTitle>
+        <CardTitle className="text-3xl font-extrabold">Todos os Cursos</CardTitle>
         <Button
           onClick={() => {
             setCurrentEditedCourseId(null);
@@ -38,7 +38,7 @@ function InstructorCourses({ listOfCourses }) {
           }}
           className="p-6"
         >
-          Create New Course
+          Criar curso
         </Button>
       </CardHeader>
       <CardContent>
@@ -46,10 +46,10 @@ function InstructorCourses({ listOfCourses }) {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Course</TableHead>
-                <TableHead>Students</TableHead>
-                <TableHead>Revenue</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
+                <TableHead>Curso</TableHead>
+                <TableHead>Estudantes</TableHead>
+                <TableHead>Receita</TableHead>
+                <TableHead className="text-right">Ações</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

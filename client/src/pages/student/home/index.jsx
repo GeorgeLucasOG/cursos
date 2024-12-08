@@ -56,9 +56,9 @@ function StudentHomePage() {
     <div className="min-h-screen bg-white">
       <section className="flex flex-col lg:flex-row items-center justify-between py-8 px-4 lg:px-8">
         <div className="lg:w-1/2 lg:pr-12">
-          <h1 className="text-4xl font-bold mb-4">Learning thet gets you</h1>
+          <h1 className="text-4xl font-bold mb-4">Aprender isso te leva à</h1>
           <p className="text-xl">
-            Skills for your present and your future. Get Started with US
+          Habilidades para o seu presente e seu futuro. Comece conosco
           </p>
         </div>
         <div className="lg:w-full mb-8 lg:mb-0">
@@ -71,7 +71,7 @@ function StudentHomePage() {
         </div>
       </section>
       <section className="py-8 px-4 lg:px-8 bg-gray-100">
-        <h2 className="text-2xl font-bold mb-6">Course Categories</h2>
+        <h2 className="text-2xl font-bold mb-6">Categoria de cursos</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {courseCategories.map((categoryItem) => (
             <Button
@@ -86,7 +86,7 @@ function StudentHomePage() {
         </div>
       </section>
       <section className="py-12 px-4 lg:px-8">
-        <h2 className="text-2xl font-bold mb-6">Featured COourses</h2>
+        <h2 className="text-2xl font-bold mb-6">Cursos em destaque</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {studentViewCoursesList && studentViewCoursesList.length > 0 ? (
             studentViewCoursesList.map((courseItem) => (
@@ -112,7 +112,7 @@ function StudentHomePage() {
               </div>
             ))
           ) : (
-            <h1>No Courses Found</h1>
+            <h1>Curso não encontrado</h1>
           )}
         </div>
       </section>

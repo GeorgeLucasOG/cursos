@@ -127,7 +127,7 @@ function StudentViewCoursesPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">All Courses</h1>
+      <h1 className="text-3xl font-bold mb-4">Todos os cursos</h1>
       <div className="flex flex-col md:flex-row gap-4">
         <aside className="w-full md:w-64 space-y-4">
           <div>
@@ -166,7 +166,7 @@ function StudentViewCoursesPage() {
                   className="flex items-center gap-2 p-5"
                 >
                   <ArrowUpDownIcon className="h-4 w-4" />
-                  <span className="text-[16px] font-medium">Sort By</span>
+                  <span className="text-[16px] font-medium">Ordenar por</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-[180px]">
@@ -186,7 +186,7 @@ function StudentViewCoursesPage() {
               </DropdownMenuContent>
             </DropdownMenu>
             <span className="text-sm text-black font-bold">
-              {studentViewCoursesList.length} Results
+              {studentViewCoursesList.length} Resultados
             </span>
           </div>
           <div className="space-y-4">
@@ -231,7 +231,7 @@ function StudentViewCoursesPage() {
             ) : loadingState ? (
               <Skeleton />
             ) : (
-              <h1 className="font-extrabold text-4xl">No Courses Found</h1>
+              <h1 className="font-extrabold text-4xl">Curso não encontrado</h1>
             )}
           </div>
         </main>

@@ -189,7 +189,7 @@ function CourseCurriculum() {
   return (
     <Card>
       <CardHeader className="flex flex-row justify-between">
-        <CardTitle>Create Course Curriculum</CardTitle>
+        <CardTitle>Criar Curriculum do Curso</CardTitle>
         <div>
           <Input
             type="file"
@@ -208,7 +208,7 @@ function CourseCurriculum() {
             onClick={handleOpenBulkUploadDialog}
           >
             <Upload className="w-4 h-5 mr-2" />
-            Bulk Upload
+            Upload em massa
           </Button>
         </div>
       </CardHeader>
@@ -217,7 +217,7 @@ function CourseCurriculum() {
           disabled={!isCourseCurriculumFormDataValid() || mediaUploadProgress}
           onClick={handleNewLecture}
         >
-          Add Lecture
+          Adicionar palestra
         </Button>
         {mediaUploadProgress ? (
           <MediaProgressbar
@@ -229,10 +229,10 @@ function CourseCurriculum() {
           {courseCurriculumFormData.map((curriculumItem, index) => (
             <div className="border p-5 rounded-md">
               <div className="flex gap-5 items-center">
-                <h3 className="font-semibold">Lecture {index + 1}</h3>
+                <h3 className="font-semibold">Lição {index + 1}</h3>
                 <Input
                   name={`title-${index + 1}`}
-                  placeholder="Enter lecture title"
+                  placeholder="Digite o título da lição"
                   className="max-w-96"
                   onChange={(event) => handleCourseTitleChange(event, index)}
                   value={courseCurriculumFormData[index]?.title}
@@ -246,7 +246,7 @@ function CourseCurriculum() {
                     id={`freePreview-${index + 1}`}
                   />
                   <Label htmlFor={`freePreview-${index + 1}`}>
-                    Free Preview
+                    Visualização gratuita
                   </Label>
                 </div>
               </div>

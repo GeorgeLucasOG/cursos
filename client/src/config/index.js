@@ -1,22 +1,22 @@
 export const signUpFormControls = [
   {
     name: "userName",
-    label: "User Name",
-    placeholder: "Enter your user name",
+    label: "Nome do usuário",
+    placeholder: "Digite o nome do usuário",
     type: "text",
     componentType: "input",
   },
   {
     name: "userEmail",
-    label: "User Email",
-    placeholder: "Enter your user email",
+    label: "Usuário Email",
+    placeholder: "Digite o seu email",
     type: "email",
     componentType: "input",
   },
   {
     name: "password",
-    label: "Password",
-    placeholder: "Enter your password",
+    label: "Senha",
+    placeholder: "Digite a sua senha",
     type: "password",
     componentType: "input",
   },
@@ -25,15 +25,15 @@ export const signUpFormControls = [
 export const signInFormControls = [
   {
     name: "userEmail",
-    label: "User Email",
-    placeholder: "Enter your user email",
+    label: "Email do usuário",
+    placeholder: "Digite o email do usuário",
     type: "email",
     componentType: "input",
   },
   {
     name: "password",
-    label: "Password",
-    placeholder: "Enter your password",
+    label: "Senha",
+    placeholder: "Digite a senha",
     type: "password",
     componentType: "input",
   },
@@ -64,9 +64,9 @@ export const languageOptions = [
 ];
 
 export const courseLevelOptions = [
-  { id: "beginner", label: "Beginner" },
-  { id: "intermediate", label: "Intermediate" },
-  { id: "advanced", label: "Advanced" },
+  { id: "beginner", label: "Iniciante" },
+  { id: "intermediate", label: "Intermediário" },
+  { id: "advanced", label: "Avançado" },
 ];
 
 export const courseCategories = [
@@ -74,25 +74,39 @@ export const courseCategories = [
   { id: "backend-development", label: "Backend Development" },
   { id: "data-science", label: "Data Science" },
   { id: "machine-learning", label: "Machine Learning" },
-  { id: "artificial-intelligence", label: "Artificial Intelligence" },
+  { id: "artificial-intelligence", label: "Inteligência Artificial" },
   { id: "cloud-computing", label: "Cloud Computing" },
   { id: "cyber-security", label: "Cyber Security" },
   { id: "mobile-development", label: "Mobile Development" },
   { id: "game-development", label: "Game Development" },
-  { id: "software-engineering", label: "Software Engineering" },
+  { id: "software-engineering", label: "Engenharia de Software" },
+  { id: "formacaoempreendendora", label: "Formacão Empreendendora" },
+  { id: "informaticaessencial", label: "Informatica Essencial" },
+  { id: "rh", label: "RH e DP Essencial" },
+  { id: "financas-essencial", label: "Finanças Essencial" },
+  { id: "google-workspace", label: "Google Workspace" },
+  { id: "contabil-essencial", label: "Contábil Essencial" },
+  { id: "edicao-video", label: "Edição de vídeo" },
+  { id: "ingles", label: "Inglês" },
+  { id: "matematica", label: "Matemática" },
+  { id: "robotica", label: "Robótica" },
+  { id: "automacao", label: "Automação" },
+  { id: "analytics", label: "Analytics" },
+  { id: "desenvolvimento-profissional", label: "Desenvolvimento Profissional" },
+  { id: "formacaodigital", label: "Formação Digital" },
 ];
 
 export const courseLandingPageFormControls = [
   {
     name: "title",
-    label: "Title",
+    label: "Título",
     componentType: "input",
     type: "text",
-    placeholder: "Enter course title",
+    placeholder: "Digite o título do curso",
   },
   {
     name: "category",
-    label: "Category",
+    label: "Categoria",
     componentType: "select",
     type: "text",
     placeholder: "",
@@ -100,7 +114,7 @@ export const courseLandingPageFormControls = [
   },
   {
     name: "level",
-    label: "Level",
+    label: "Nível",
     componentType: "select",
     type: "text",
     placeholder: "",
@@ -108,7 +122,7 @@ export const courseLandingPageFormControls = [
   },
   {
     name: "primaryLanguage",
-    label: "Primary Language",
+    label: "Primeira  Língua",
     componentType: "select",
     type: "text",
     placeholder: "",
@@ -116,37 +130,37 @@ export const courseLandingPageFormControls = [
   },
   {
     name: "subtitle",
-    label: "Subtitle",
+    label: "Legenda",
     componentType: "input",
     type: "text",
-    placeholder: "Enter course subtitle",
+    placeholder: "Digite a legenda do curso",
   },
   {
     name: "description",
-    label: "Description",
+    label: "Descrição",
     componentType: "textarea",
     type: "text",
-    placeholder: "Enter course description",
+    placeholder: "Digite a Descrição",
   },
   {
     name: "pricing",
-    label: "Pricing",
+    label: "Preço",
     componentType: "input",
     type: "number",
-    placeholder: "Enter course pricing",
+    placeholder: "Insira o preço do curso",
   },
   {
     name: "objectives",
-    label: "Objectives",
+    label: "Objetivos",
     componentType: "textarea",
     type: "text",
-    placeholder: "Enter course objectives",
+    placeholder: "Digite os objetivos do curso",
   },
   {
     name: "welcomeMessage",
-    label: "Welcome Message",
+    label: "Mensagem de boas vindas",
     componentType: "textarea",
-    placeholder: "Welcome message for students",
+    placeholder: "Mensagens para estudantes",
   },
 ];
 
@@ -173,10 +187,10 @@ export const courseCurriculumInitialFormData = [
 ];
 
 export const sortOptions = [
-  { id: "price-lowtohigh", label: "Price: Low to High" },
-  { id: "price-hightolow", label: "Price: High to Low" },
-  { id: "title-atoz", label: "Title: A to Z" },
-  { id: "title-ztoa", label: "Title: Z to A" },
+  { id: "price-lowtohigh", label: "Preço: Acessível para o mais Premium" },
+  { id: "price-hightolow", label: "Preço: do Premium o mais acessível" },
+  { id: "title-atoz", label: "Título: A à Z" },
+  { id: "title-ztoa", label: "Título: Z para A" },
 ];
 
 export const filterOptions = {

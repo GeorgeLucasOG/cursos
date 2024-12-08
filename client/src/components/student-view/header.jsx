@@ -19,7 +19,7 @@ function StudentViewCommonHeader() {
         <Link to="/home" className="flex items-center hover:text-black">
           <GraduationCap className="h-8 w-8 mr-4 " />
           <span className="font-extrabold md:text-xl text-[14px]">
-            LMS LEARN
+            Centro Profissional Excel Informática
           </span>
         </Link>
         <div className="flex items-center space-x-1">
@@ -32,7 +32,7 @@ function StudentViewCommonHeader() {
             }}
             className="text-[14px] md:text-[16px] font-medium"
           >
-            Explore Courses
+            Cursos
           </Button>
         </div>
       </div>
@@ -43,11 +43,11 @@ function StudentViewCommonHeader() {
             className="flex cursor-pointer items-center gap-3"
           >
             <span className="font-extrabold md:text-xl text-[14px]">
-              My Courses
+              Meus Cursos
             </span>
             <TvMinimalPlay className="w-8 h-8 cursor-pointer" />
           </div>
-          <Button onClick={handleLogout}>Sign Out</Button>
+          <Button onClick={handleLogout}>Sair</Button>
         </div>
       </div>
     </header>

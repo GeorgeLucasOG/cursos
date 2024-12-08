@@ -45,7 +45,7 @@ function CourseSettings() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Course Settings</CardTitle>
+        <CardTitle>Configuração do Curso</CardTitle>
       </CardHeader>
       <div className="p-4">
         {mediaUploadProgress ? (
@@ -60,7 +60,7 @@ function CourseSettings() {
           <img src={courseLandingFormData.image} />
         ) : (
           <div className="flex flex-col gap-3">
-            <Label>Upload Course Image</Label>
+            <Label>Upload da imagem do curso </Label>
             <Input
               onChange={handleImageUploadChange}
               type="file"
