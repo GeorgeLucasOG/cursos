@@ -16,7 +16,7 @@ const uploadMediaToCloudinary = async (filePath) => {
     return result;
   } catch (error) {
     console.log(error);
-    throw new Error("Error uploading to cloudinary");
+    throw new Error("Erro de uploading para o cloudinary");
   }
 };
 

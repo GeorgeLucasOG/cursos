@@ -131,7 +131,7 @@ function StudentViewCourseProgressPage() {
             size="sm"
           >
             <ChevronLeft className="h-4 w-4 mr-2" />
-            Back to My Courses Page
+            Voltar para a página dos Meus Cursos
           </Button>
           <h1 className="text-lg font-bold hidden md:block">
             {studentCurrentCourseProgress?.courseDetails?.title}
@@ -173,13 +173,13 @@ function StudentViewCourseProgressPage() {
                 value="content"
                 className=" text-black rounded-none h-full"
               >
-                Course Content
+                Conteúdo do Curso
               </TabsTrigger>
               <TabsTrigger
                 value="overview"
                 className=" text-black rounded-none h-full"
               >
-                Overview
+                Visão Geral
               </TabsTrigger>
             </TabsList>
             <TabsContent value="content">
@@ -208,7 +208,7 @@ function StudentViewCourseProgressPage() {
             <TabsContent value="overview" className="flex-1 overflow-hidden">
               <ScrollArea className="h-full">
                 <div className="p-4">
-                  <h2 className="text-xl font-bold mb-4">About this course</h2>
+                  <h2 className="text-xl font-bold mb-4">Sobre esse curso</h2>
                   <p className="text-gray-400">
                     {studentCurrentCourseProgress?.courseDetails?.description}
                   </p>
@@ -221,9 +221,9 @@ function StudentViewCourseProgressPage() {
       <Dialog open={lockCourse}>
         <DialogContent className="sm:w-[425px]">
           <DialogHeader>
-            <DialogTitle>You can't view this page</DialogTitle>
+            <DialogTitle>Você não tem autorização para ver esse conteúdo</DialogTitle>
             <DialogDescription>
-              Please purchase this course to get access
+              Por favor faça a aquisição desse curso
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
@@ -231,14 +231,14 @@ function StudentViewCourseProgressPage() {
       <Dialog open={showCourseCompleteDialog}>
         <DialogContent showOverlay={false} className="sm:w-[425px]">
           <DialogHeader>
-            <DialogTitle>Congratulations!</DialogTitle>
+            <DialogTitle>Parabéns!</DialogTitle>
             <DialogDescription className="flex flex-col gap-3">
-              <Label>You have completed the course</Label>
+              <Label>Você Terminou o Curso!</Label>
               <div className="flex flex-row gap-3">
                 <Button onClick={() => navigate("/student-courses")}>
-                  My Courses Page
+                  Página do meu Curso
                 </Button>
-                <Button onClick={handleRewatchCourse}>Rewatch Course</Button>
+                <Button onClick={handleRewatchCourse}>Rever Curso</Button>
               </div>
             </DialogDescription>
           </DialogHeader>

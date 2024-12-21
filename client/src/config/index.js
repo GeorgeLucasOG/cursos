@@ -109,7 +109,7 @@ export const courseLandingPageFormControls = [
     label: "Categoria",
     componentType: "select",
     type: "text",
-    placeholder: "",
+    placeholder: "Categoria",
     options: courseCategories,
   },
   {
@@ -117,7 +117,7 @@ export const courseLandingPageFormControls = [
     label: "Nível",
     componentType: "select",
     type: "text",
-    placeholder: "",
+    placeholder: "Nível",
     options: courseLevelOptions,
   },
   {
@@ -125,7 +125,7 @@ export const courseLandingPageFormControls = [
     label: "Primeira  Língua",
     componentType: "select",
     type: "text",
-    placeholder: "",
+    placeholder: "Primeira  Língua",
     options: languageOptions,
   },
   {

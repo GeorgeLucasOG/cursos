@@ -163,7 +163,7 @@ function StudentViewCourseDetailsPage() {
         <main className="flex-grow">
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>What you'll learn</CardTitle>
+              <CardTitle>O que você aprenderá</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -180,13 +180,13 @@ function StudentViewCourseDetailsPage() {
           </Card>
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>Course Description</CardTitle>
+              <CardTitle>Descrição do Curso</CardTitle>
             </CardHeader>
             <CardContent>{studentViewCourseDetails?.description}</CardContent>
           </Card>
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>Course Curriculum</CardTitle>
+              <CardTitle>Curriculum do Curso</CardTitle>
             </CardHeader>
             <CardContent>
               {studentViewCourseDetails?.curriculum?.map(
@@ -237,7 +237,7 @@ function StudentViewCourseDetailsPage() {
                 </span>
               </div>
               <Button onClick={handleCreatePayment} className="w-full">
-                Buy Now
+                Começar agora
               </Button>
             </CardContent>
           </Card>
@@ -252,7 +252,7 @@ function StudentViewCourseDetailsPage() {
       >
         <DialogContent className="w-[800px]">
           <DialogHeader>
-            <DialogTitle>Course Preview</DialogTitle>
+            <DialogTitle>Prévia do Curso</DialogTitle>
           </DialogHeader>
           <div className="aspect-video rounded-lg flex items-center justify-center">
             <VideoPlayer

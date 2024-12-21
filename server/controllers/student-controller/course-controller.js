@@ -57,7 +57,7 @@ const getAllStudentViewCourses = async (req, res) => {
     console.log(e);
     res.status(500).json({
       success: false,
-      message: "Some error occured!",
+      message: "Ocorreu algum erro!",
     });
   }
 };
@@ -70,7 +70,7 @@ const getStudentViewCourseDetails = async (req, res) => {
     if (!courseDetails) {
       return res.status(404).json({
         success: false,
-        message: "No course details found",
+        message: "Não foi encontrado detalhes do curso",
         data: null,
       });
     }
@@ -83,7 +83,7 @@ const getStudentViewCourseDetails = async (req, res) => {
     console.log(e);
     res.status(500).json({
       success: false,
-      message: "Some error occured!",
+      message: "Algum erro aconteceu!",
     });
   }
 };
@@ -95,6 +95,13 @@ const checkCoursePurchaseInfo = async (req, res) => {
       userId: studentId,
     });
 
+    if (!studentCourses) {
+      return res.status(404).json({
+        success: false,
+        message: "Curso não encontrado!",
+      });
+    }
+
     const ifStudentAlreadyBoughtCurrentCourse =
       studentCourses.courses.findIndex((item) => item.courseId === id) > -1;
     res.status(200).json({
@@ -105,7 +112,7 @@ const checkCoursePurchaseInfo = async (req, res) => {
     console.log(e);
     res.status(500).json({
       success: false,
-      message: "Some error occured!",
+      message: "Aconteceu algum erro interno do software! Contato o suporte.",
     });
   }
 };

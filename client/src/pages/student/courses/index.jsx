@@ -209,7 +209,7 @@ function StudentViewCoursesPage() {
                         {courseItem?.title}
                       </CardTitle>
                       <p className="text-sm text-gray-600 mb-1">
-                        Created By{" "}
+                        Criado por{" "}
                         <span className="font-bold">
                           {courseItem?.instructorName}
                         </span>
@@ -217,9 +217,9 @@ function StudentViewCoursesPage() {
                       <p className="text-[16px] text-gray-600 mt-3 mb-2">
                         {`${courseItem?.curriculum?.length} ${
                           courseItem?.curriculum?.length <= 1
-                            ? "Lecture"
-                            : "Lectures"
-                        } - ${courseItem?.level.toUpperCase()} Level`}
+                            ? "ª Aula"
+                            : "Aulas"
+                        } - ${courseItem?.level.toUpperCase()} `}
                       </p>
                       <p className="font-bold text-lg">
                         ${courseItem?.pricing}

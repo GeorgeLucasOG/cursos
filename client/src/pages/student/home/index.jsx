@@ -34,9 +34,14 @@ function StudentHomePage() {
   }
 
   async function handleCourseNavigate(getCurrentCourseId) {
+    if (!auth || !auth.user || !auth.user._id) {
+        console.error("O usuário não está autenticado!");
+        return;
+    }
+
     const response = await checkCoursePurchaseInfoService(
       getCurrentCourseId,
-      auth?.user?._id
+      auth.user._id
     );
 
     if (response?.success) {
@@ -91,6 +96,7 @@ function StudentHomePage() {
           {studentViewCoursesList && studentViewCoursesList.length > 0 ? (
             studentViewCoursesList.map((courseItem) => (
               <div
+                key={courseItem?._id}
                 onClick={() => handleCourseNavigate(courseItem?._id)}
                 className="border rounded-lg overflow-hidden shadow cursor-pointer"
               >

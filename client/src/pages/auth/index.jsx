@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 
 function AuthPage() {
   const [activeTab, setActiveTab] = useState("signin");
+  const [isConfirmationDialogVisible, setIsConfirmationDialogVisible] = useState(false);
   const {
     signInFormData,
     setSignInFormData,
@@ -47,6 +48,17 @@ function AuthPage() {
 
   console.log(signInFormData);
 
+  function handleRegisterUserWithConfirmation() { 
+    handleRegisterUser()
+     .then(() => {
+       setIsConfirmationDialogVisible(true);
+      })
+     .catch((error) => {
+       console.error("Registration error:", error);
+      });
+  }
+
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-14 flex items-center border-b">
@@ -77,7 +89,7 @@ function AuthPage() {
               <CardContent className="space-y-2">
                 <CommonForm
                   formControls={signInFormControls}
-                  buttonText={"Sign In"}
+                  buttonText={"Entrar"}
                   formData={signInFormData}
                   setFormData={setSignInFormData}
                   isButtonDisabled={!checkIfSignInFormIsValid()}
@@ -97,11 +109,12 @@ function AuthPage() {
               <CardContent className="space-y-2">
                 <CommonForm
                   formControls={signUpFormControls}
-                  buttonText={"Sign Up"}
+                  buttonText={"Inscrever-se"}
                   formData={signUpFormData}
                   setFormData={setSignUpFormData}
                   isButtonDisabled={!checkIfSignUpFormIsValid()}
-                  handleSubmit={handleRegisterUser}
+                  //handleSubmit={handleRegisterUser}
+                  handleSubmit={handleRegisterUserWithConfirmation}
                 />
               </CardContent>
             </Card>
