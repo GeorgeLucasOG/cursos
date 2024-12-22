@@ -19,7 +19,7 @@ function StudentViewCommonHeader() {
         <Link to="/home" className="flex items-center hover:text-black">
           <GraduationCap className="h-8 w-8 mr-4 " />
           <span className="font-extrabold md:text-xl text-[14px]">
-            Centro Profissional Excel Informática
+            Centro Profissional Excel
           </span>
         </Link>
         <div className="flex items-center space-x-1">
@@ -30,9 +30,31 @@ function StudentViewCommonHeader() {
                 ? null
                 : navigate("/courses");
             }}
-            className="text-[14px] md:text-[16px] font-medium"
+            className="text-[14px] md:text-[17px] font-medium"
           >
             Cursos
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={() => {
+              location.pathname.includes("/loja")
+                ? null
+                : navigate("/loja");
+            }}
+            className="text-[14px] md:text-[17px] font-medium"
+          >
+            Loja
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={() => {
+              location.pathname.includes("/suporte")
+                ? null
+                : navigate("/suporte");
+            }}
+            className="text-[14px] md:text-[17px] font-medium"
+          >
+            Suporte
           </Button>
         </div>
       </div>
