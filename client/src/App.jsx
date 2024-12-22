@@ -61,16 +61,11 @@ function App() {
       />
       <Route
         path="/"
-        element={
-          <RouteGuard
-            element={<StudentViewCommonLayout />}
-            authenticated={auth?.authenticate}
-            user={auth?.user}
-          />
+        element={<StudentViewCommonLayout />
         }
       >
-        <Route path="" element={<StudentHomePage />} />
-        <Route path="home" element={<StudentHomePage />} />
+        <Route path="" element={<StudentViewCommonLayout />} />
+        <Route path="home" element={<StudentViewCommonLayout />} />
         <Route path="courses" element={<StudentViewCoursesPage />} />
         <Route
           path="course/details/:id"
