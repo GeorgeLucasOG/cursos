@@ -10,7 +10,7 @@ function CourseLanding() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Landing Page do Curso</CardTitle>
+        <CardTitle>Informações do Curso</CardTitle>
       </CardHeader>
       <CardContent>
         <FormControls

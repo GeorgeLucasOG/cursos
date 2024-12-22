@@ -189,7 +189,7 @@ function CourseCurriculum() {
   return (
     <Card>
       <CardHeader className="flex flex-row justify-between">
-        <CardTitle>Criar Curriculum do Curso</CardTitle>
+        <CardTitle>Cradastrar aulas do curso</CardTitle>
         <div>
           <Input
             type="file"
@@ -217,7 +217,7 @@ function CourseCurriculum() {
           disabled={!isCourseCurriculumFormDataValid() || mediaUploadProgress}
           onClick={handleNewLecture}
         >
-          Adicionar palestra
+          Adicionar Aula
         </Button>
         {mediaUploadProgress ? (
           <MediaProgressbar
@@ -229,7 +229,7 @@ function CourseCurriculum() {
           {courseCurriculumFormData.map((curriculumItem, index) => (
             <div className="border p-5 rounded-md">
               <div className="flex gap-5 items-center">
-                <h3 className="font-semibold">Lição {index + 1}</h3>
+                <h3 className="font-semibold">Aula {index + 1}</h3>
                 <Input
                   name={`title-${index + 1}`}
                   placeholder="Digite o título da lição"
@@ -246,7 +246,7 @@ function CourseCurriculum() {
                     id={`freePreview-${index + 1}`}
                   />
                   <Label htmlFor={`freePreview-${index + 1}`}>
-                    Visualização gratuita
+                    Aula grátis
                   </Label>
                 </div>
               </div>

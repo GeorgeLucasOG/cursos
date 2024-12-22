@@ -146,11 +146,11 @@ function AddNewCoursePage() {
           <div className="container mx-auto p-4">
             <Tabs defaultValue="curriculum" className="space-y-4">
               <TabsList>
-                <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
+                <TabsTrigger value="curriculum">Aulas</TabsTrigger>
                 <TabsTrigger value="course-landing-page">
-                  Landing Page do Curso
+                  Informações do Curso
                 </TabsTrigger>
-                <TabsTrigger value="settings">Configurações</TabsTrigger>
+                <TabsTrigger value="settings">Capa</TabsTrigger>
               </TabsList>
               <TabsContent value="curriculum">
                 <CourseCurriculum />
