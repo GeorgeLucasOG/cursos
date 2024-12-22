@@ -88,15 +88,16 @@ function StudentViewCoursesPage() {
   }
 
   async function handleCourseNavigate(getCurrentCourseId) {
-    const response = await checkCoursePurchaseInfoService(
+    //const response = await checkCoursePurchaseInfoService(
+    const response = await fetchStudentViewCourseListService(
       getCurrentCourseId,
-      auth?.user?._id
+      //auth?.user?._id
     );
 
     if (response?.success) {
       if (response?.data) {
-        navigate(`/course-progress/${getCurrentCourseId}`);
-      } else {
+      //   navigate(`/course-progress/${getCurrentCourseId}`);
+      // } else {
         navigate(`/course/details/${getCurrentCourseId}`);
       }
     }

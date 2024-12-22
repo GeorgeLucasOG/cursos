@@ -34,21 +34,28 @@ function StudentHomePage() {
   }
 
   async function handleCourseNavigate(getCurrentCourseId) {
-    if (!auth || !auth.user || !auth.user._id) {
-        console.error("O usuário não está autenticado!");
-        return;
-    }
+    // if (!auth || !auth.user || !auth.user._id) {
+    //     console.error("O usuário não está autenticado!");
+    //     return;
+    // }
 
-    const response = await checkCoursePurchaseInfoService(
+    // const response = await checkCoursePurchaseInfoService(
+    //   getCurrentCourseId,
+    //   auth.user._id
+    // );
+
+    //retorna os dados de um curso e armazena em response
+    const response = await fetchStudentViewCourseListService(
       getCurrentCourseId,
-      auth.user._id
-    );
+    );    
 
     if (response?.success) {
       if (response?.data) {
-        navigate(`/course-progress/${getCurrentCourseId}`);
-      } else {
+      //   navigate(`/course-progress/${getCurrentCourseId}`);
+      // } else {
         navigate(`/course/details/${getCurrentCourseId}`);
+      }else{
+        navigate(`/courses`);
       }
     }
   }
@@ -98,6 +105,7 @@ function StudentHomePage() {
               <div
                 key={courseItem?._id}
                 onClick={() => handleCourseNavigate(courseItem?._id)}
+                //onClick={() => navigate(`/course/details/${courseItem?.id}`)}
                 className="border rounded-lg overflow-hidden shadow cursor-pointer"
               >
                 <img
