@@ -145,8 +145,8 @@ function StudentViewCourseDetailsPage() {
         </h1>
         <p className="text-xl mb-4">{studentViewCourseDetails?.subtitle}</p>
         <div className="flex items-center space-x-4 mt-2 text-sm">
-          <span>Created By {studentViewCourseDetails?.instructorName}</span>
-          <span>Created On {studentViewCourseDetails?.date.split("T")[0]}</span>
+          <span>Criado por {studentViewCourseDetails?.instructorName}</span>
+          <span>Publicado em {new Date(studentViewCourseDetails?.date).toLocaleDateString('pt-BR')}</span>
           <span className="flex items-center">
             <Globe className="mr-1 h-4 w-4" />
             {studentViewCourseDetails?.primaryLanguage}
@@ -154,8 +154,8 @@ function StudentViewCourseDetailsPage() {
           <span>
             {studentViewCourseDetails?.students.length}{" "}
             {studentViewCourseDetails?.students.length <= 1
-              ? "Student"
-              : "Students"}
+              ? "Aluno"
+              : "Alunos"}
           </span>
         </div>
       </div>
@@ -186,13 +186,13 @@ function StudentViewCourseDetailsPage() {
           </Card>
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>Curriculum do Curso</CardTitle>
+              <CardTitle>Conteúdo do Curso</CardTitle>
             </CardHeader>
             <CardContent>
               {studentViewCourseDetails?.curriculum?.map(
                 (curriculumItem, index) => (
                   <li
-                    className={`${
+                    className={`R${
                       curriculumItem?.freePreview
                         ? "cursor-pointer"
                         : "cursor-not-allowed"
@@ -233,7 +233,7 @@ function StudentViewCourseDetailsPage() {
               </div>
               <div className="mb-4">
                 <span className="text-3xl font-bold">
-                  ${studentViewCourseDetails?.pricing}
+                  R${studentViewCourseDetails?.pricing}
                 </span>
               </div>
               <Button onClick={handleCreatePayment} className="w-full">
