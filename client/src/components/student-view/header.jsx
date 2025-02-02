@@ -6,17 +6,18 @@ import { AuthContext } from "@/context/auth-context";
 
 function StudentViewCommonHeader() {
   const navigate = useNavigate();
-  const { resetCredentials } = useContext(AuthContext);
+  const {auth, resetCredentials } = useContext(AuthContext);
 
   function handleLogout() {
     resetCredentials();
     sessionStorage.clear();
+    navigate("/");
   }
 
   return (
     <header className="flex items-center justify-between p-4 border-b relative">
       <div className="flex items-center space-x-4">
-        <Link to="/home" className="flex items-center hover:text-black">
+        <Link to="/" className="flex items-center hover:text-black">
           <GraduationCap className="h-8 w-8 mr-4 " />
           <span className="font-extrabold md:text-xl text-[14px]">
             Centro Profissional Excel
@@ -56,9 +57,23 @@ function StudentViewCommonHeader() {
           >
             Suporte
           </Button>
+          <Button
+            variant="ghost"
+            onClick={() => {
+              location.pathname.includes("/empregos")
+                ? null
+                : navigate("/suporte");
+            }}
+            className="text-[14px] md:text-[17px] font-medium"
+          >
+            Empregos
+          </Button>
         </div>
       </div>
+
       <div className="flex items-center space-x-4">
+      {auth?.authenticate ?
+        (  
         <div className="flex gap-4 items-center">
           <div
             onClick={() => navigate("/student-courses")}
@@ -71,6 +86,16 @@ function StudentViewCommonHeader() {
           </div>
           <Button onClick={handleLogout}>Sair</Button>
         </div>
+        ) : (
+          <Button 
+            variant="default"
+            onClick={() => navigate("/auth")}
+            className="text-[14px] md:text-[17px] font-medium"
+          >
+            Entrar
+          </Button>
+            )
+      }        
       </div>
     </header>
   );
