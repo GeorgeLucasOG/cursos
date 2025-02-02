@@ -75,6 +75,13 @@ function StudentViewCourseDetailsPage() {
   }
 
   async function handleCreatePayment() {
+    if (!auth?.authenticate) {
+      // Redirecionar para login com retorno para página atual
+      navigate("/auth", { 
+        state: { returnUrl: `/course/details/${currentCourseDetailsId}` } 
+      });
+      return;
+    }
     const paymentPayload = {
       userId: auth?.user?._id,
       userName: auth?.user?.userName,
@@ -237,7 +244,7 @@ function StudentViewCourseDetailsPage() {
                 </span>
               </div>
               <Button onClick={handleCreatePayment} className="w-full">
-                Começar agora
+                {auth?.authenticate ? "Começar agora" : "Fazer login para comprar"}
               </Button>
             </CardContent>
           </Card>
