@@ -1,19 +1,19 @@
 import { courseCategories } from "@/config";
-import banner from "../../../../public/banner-img.png";
+import { banner } from "/banner-img.png";
 import { Button } from "@/components/ui/button";
 import { useContext, useEffect } from "react";
 import { StudentContext } from "@/context/student-context";
 import {
-  checkCoursePurchaseInfoService,
+  //checkCoursePurchaseInfoService,
   fetchStudentViewCourseListService,
 } from "@/services";
-import { AuthContext } from "@/context/auth-context";
+//import { AuthContext } from "@/context/auth-context";
 import { useNavigate } from "react-router-dom";
 
 function StudentHomePage() {
   const { studentViewCoursesList, setStudentViewCoursesList } =
     useContext(StudentContext);
-  const { auth } = useContext(AuthContext);
+  //const { auth } = useContext(AuthContext);
   const navigate = useNavigate();
 
   function handleNavigateToCoursesPage(getCurrentId) {
@@ -46,15 +46,15 @@ function StudentHomePage() {
 
     //retorna os dados de um curso e armazena em response
     const response = await fetchStudentViewCourseListService(
-      getCurrentCourseId,
-    );    
+      getCurrentCourseId
+    );
 
     if (response?.success) {
       if (response?.data) {
-      //   navigate(`/course-progress/${getCurrentCourseId}`);
-      // } else {
+        //   navigate(`/course-progress/${getCurrentCourseId}`);
+        // } else {
         navigate(`/course/details/${getCurrentCourseId}`);
-      }else{
+      } else {
         navigate(`/courses`);
       }
     }
@@ -70,7 +70,7 @@ function StudentHomePage() {
         <div className="lg:w-1/2 lg:pr-12">
           <h1 className="text-4xl font-bold mb-4">Aprender isso te leva à</h1>
           <p className="text-xl">
-          Habilidades para o seu presente e seu futuro. Comece conosco
+            Habilidades para o seu presente e seu futuro. Comece conosco
           </p>
         </div>
         <div className="lg:w-full mb-8 lg:mb-0">
