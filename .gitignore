@@ -1,2 +1,4 @@
 client/vite.config.js
 server/.env
+.env
+vite.config.js
